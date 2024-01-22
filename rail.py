@@ -1,6 +1,7 @@
 #Encreption code
 def encryption(plain_text, key):
     cipher_text = ""
+     #Doing Operations for if key needs to be repeated
     key_repeated = (key * (len(plain_text) // len(key) + 1))[:len(plain_text)]
     for i in range(len(plain_text)):
         if plain_text[i].isalpha():
@@ -14,6 +15,7 @@ def encryption(plain_text, key):
 #Decryption Code
 def decryption(encrypted_text, key):
     plain_text = ""
+    
     key_repeated = (key * (len(encrypted_text) // len(key) + 1))[:len(encrypted_text)]
     for i in range(len(encrypted_text)):
         if encrypted_text[i].isalpha():
